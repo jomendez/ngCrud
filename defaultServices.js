@@ -46,19 +46,14 @@
 
     this.saveItem = function (dataTodoData) {
         var dfr = $q.defer();
-        
+        delete dataTodoData['$id'];
         dfr.resolve(FirebaseObj.$add(dataTodoData));
         return dfr.promise;
         
     };
 
     this.modifyItem = function (dataTodoData) {
-        var dfr = $q.defer();
-        $http.post("api/data/modifyItem", dataTodoData).success(function (response) {
-            dfr.resolve(response);
-        });
-
-        return dfr.promise;
+        return FirebaseObj.$save(dataTodoData);
     };
 
     this.deleteItem = function (id) {
