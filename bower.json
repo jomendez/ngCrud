@@ -1,0 +1,24 @@
+{
+  "name": "gn-crud",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jomendez/ngCrud",
+  "authors": [
+    "Jose Mendez <jomendezdev@gmail.com>"
+  ],
+  "description": "This is an AngularJs directive, to be used as a CRUD",
+  "main": "Partials/main.html",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "crud"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

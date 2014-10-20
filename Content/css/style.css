@@ -1,0 +1,73 @@
+﻿body {
+    
+}
+
+ div.col-md-8 > textarea {
+    height:100px;
+}
+
+.gn-crud-custom-search {
+    width:100%;
+    padding-bottom: 10px;
+}
+
+.gn-crud-content-panel {
+    min-width: 400px;
+    /*
+    width: 30%;
+    margin: 0 auto;
+    position:relative;
+    top:30px;*/
+}
+
+.gn-crud-content {
+    
+}
+
+#table-list {
+    width:100%;
+}
+
+.gn-crud-table-td-30 {
+    width:30%;
+}
+
+
+.gn-crud-table-td-70 {
+    width:70%;
+}
+
+.gn-crud-table-td-10 {
+    width:10%;
+}
+
+.myproyects-add-btn {
+    padding-bottom:7px;
+    padding-top:7px;
+}
+
+a > i, .gn-crud-search-icon {
+    color: #428bca;
+}
+
+.gn-crud-div-rows {
+    margin-bottom:6px;
+}
+
+
+.myproyects-ajax-loading-img {
+    /*width:16px;
+    height:16px;*/
+}
+
+.myproyects-ajax-loading-container {
+    position: relative;
+    left: 2px;
+    top: -5px;
+    z-index: 10;
+    float: right;
+}
+
+.ng-crud-panel-body {
+    overflow-x: overlay;
+}
