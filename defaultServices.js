@@ -58,7 +58,9 @@
 
     this.deleteItem = function (id) {
         var dfr = $q.defer();
-        dfr.resolve(FirebaseObj.$remove(id));
+        var fbid = FirebaseObj.$indexFor(id);
+        
+        dfr.resolve(FirebaseObj.$remove(FirebaseObj[fbid]));
         return dfr.promise;
     };
 
