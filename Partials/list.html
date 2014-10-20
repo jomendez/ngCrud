@@ -1,0 +1,30 @@
+﻿<div ng-controller="listController">
+    <div class="input-group gn-crud-custom-search">
+        <span class="input-group-addon "><i class="glyphicon glyphicon-search gn-crud-search-icon"></i></span>
+        <input type="text" ng-model="search" class="search-query form-control" placeholder="Search">
+    </div>
+
+    <div class="myproyects-add-btn">
+        <new-button></new-button>
+    </div>
+
+    <table id="table-list" class="table table-hover table-condenced .table-responsive">
+        <thead>
+            <tr>
+                <th ng-repeat="column in keyColumns">{{column}}</th>
+                <th class="gn-crud-table-td-10">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="crud in cruds | filter:search | orderBy:'name'">
+                
+                <td ng-repeat="td in valuesColumns"><crud-td-content-list datatd="td" datatr="crud"></crud-td-content-list></td>
+                
+                <td>
+                    <edit-icon class="myproyects-edit-icon-tooltips"></edit-icon>
+                    <delete-icon class="myproyects-delete-icon-tooltips"></delete-icon>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
