@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             <tr ng-repeat="crud in cruds | filter:search | orderBy:'name'">
-                
+              
                 <td ng-repeat="td in valuesColumns"><crud-td-content-list datatd="td" datatr="crud"></crud-td-content-list></td>
                 
                 <td>
