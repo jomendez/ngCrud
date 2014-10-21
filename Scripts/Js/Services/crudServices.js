@@ -121,7 +121,9 @@
             var idOfItemToDelete = id ? id : personId;
             crudService.deleteItem(idOfItemToDelete).then(function (data) {
                 if (data) {
-                    scope.projects.splice(_.indexOf(scope.projects, _.find(scope.projects, function (item) { return item.Id === idOfItemToDelete; })), 1);
+                    scope.splice(_.indexOf(scope, _.find(scope, function (item) {
+                        return item.Id === idOfItemToDelete;
+                    })), 1);
                 } else {
                     //todo: showMessage("No item was deleted")
                 }

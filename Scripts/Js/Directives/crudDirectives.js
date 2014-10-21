@@ -28,7 +28,7 @@ directive("deleteIcon", function (deleteItemService) {
               scope.deleteItem = function (id, _scope) { return deleteItemService.deleteItem(id, _scope); }
               $(element).tooltip({ title: "Remove" });
           },
-          template: '<a href ng-click="deleteItem(crud.Id, this)"><i class="glyphicon glyphicon-remove"></i></a>'
+          template: '<a href ng-click="deleteItem(crud.Id, cruds)"><i class="glyphicon glyphicon-remove"></i></a>'
       };
   }).
 

@@ -53,7 +53,13 @@
     };
 
     this.modifyItem = function (dataTodoData) {
-        return FirebaseObj.$save(dataTodoData);
+        var fbid = FirebaseObj.$indexFor(dataTodoData.$id);
+        var obj = FirebaseObj[fbid];
+        _.each(dataTodoData, function (value, key) {
+            obj[key] = value;
+        });
+
+        return FirebaseObj.$save(obj);
     };
 
     this.deleteItem = function (id) {
